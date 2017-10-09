@@ -1,8 +1,9 @@
 (function () {
     'use strict';
-    angular.module('myApp').controller('AuthController', function ($scope) {
+    angular.module('myApp').controller('AuthController', function ($scope, msgs) {
         var vm = $scope;
-        vm.teste = 'ola';
+        vm.msgs = msgs;
+        
     });
 
 })();
