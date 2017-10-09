@@ -26,6 +26,10 @@ app.get("/", function (req, res) {
     res.redirect("app/index.html");
 });
 
+// app.get("/login", function (req, res) {
+//     res.redirect("app/index.html");
+// });
+
 console.log("Simple server listening at http://" + hostname + ":" + port);
 
 app.listen(port, hostname);
