@@ -1,0 +1,24 @@
+{
+  "name": "Gerenciamento de Compras",
+  "homepage": "https://github.com/marcilio9590/CadCompras",
+  "authors": [
+    "marcilio9590 <marcilio9590@gmail.com>"
+  ],
+  "description": "Sistema para gerenciamento de compras",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "popper.js": "^1.12.5",
+    "tooltip.js": "https://unpkg.com/tooltip.js",
+    "bootstrap": "4.0.0-beta",
+    "jquery": "^3.2.1"
+  }
+}
