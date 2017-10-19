@@ -5,24 +5,24 @@
     <!-- <base href="/"> -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/css/login.css">
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
 </head>
 
-<body class="content">
+<body class="content" ng-controller="AuthController">
     <div class="login-container">
         <div id="output"></div>
         <div class="avatar"></div>
         <div class="form-box">
             <form action="" method="">
-                <input name="user" type="text" placeholder="username">
-                <input type="password" placeholder="password">
-                <button class="btn btn-info btn-block login" type="submit">Login</button>
+                <input name="user" ng-model="user.login" type="text" placeholder="Login">
+                <input type="password" ng-model="user.senha" placeholder="Senha">
+                <md-button ng-click="login()" class="md-raised md-primary col-md-10">Login</md-button>
             </form>
         </div>
     </div>
-
-
-    <!-- <ui-view></ui-view> -->
-
+    
+    <!-- <div ng-view>
+    </div> -->
 
     <!-- bootstrap -->
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
@@ -32,16 +32,22 @@
 
     <script src="../bower_components/tooltip.js/index.js"></script>
     <script src="../bower_components/angular/angular.min.js"></script>
-    <script src="../node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
 
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-material/angular-material.js"></script>
+
+    <script src="../node_modules/angular-route/angular-route.min.js"></script>
+    <script src="resources/javascript/login.js"></script>
     <script src="modules/aplicação/app.js"></script>
     <script src="modules/aplicação/routesConfig.js"></script>
+    <script src="modules/views/views.constants.js"></script>
+
+    <!-- Auth -->
     <script src="modules/auth/authController.js"></script>
-
-    <script src="modules/mensagens/msgs_pt-br.js"></script>
-
-    <script src="resources/javascript/login.js"></script>
-
+    <script src="modules/auth/authService.js"></script>
+    <script src="modules/auth/authFactory.js"></script>
+    <!-- FIM -->
 </body>
 
 </html>

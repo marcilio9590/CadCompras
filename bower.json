@@ -19,6 +19,7 @@
     "popper.js": "^1.12.5",
     "tooltip.js": "https://unpkg.com/tooltip.js",
     "bootstrap": "4.0.0-beta",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "angular-material": "^1.1.5"
   }
 }

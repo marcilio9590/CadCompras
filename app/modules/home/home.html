@@ -1,0 +1,50 @@
+<html ng-app="myApp">
+
+<head>
+  <title>AngularJS</title>
+  <!-- <base href="/"> -->
+  <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../resources/css/login.css">
+  <link rel="stylesheet" href="../../../bower_components/angular-material/angular-material.css">
+</head>
+
+<body class="content" ng-controller="AuthController">
+  <!-- MENU -->
+
+  <div ng-view></div>
+
+  <!-- bootstrap -->
+  <script src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../../../bower_components/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- FIM -->
+
+  <script src="../../../bower_components/tooltip.js/index.js"></script>
+  <script src="../../../bower_components/angular/angular.min.js"></script>
+
+  <script src="../../../bower_components/angular-aria/angular-aria.js"></script>
+  <script src="../../../bower_components/angular-animate/angular-animate.js"></script>
+  <script src="../../../bower_components/angular-material/angular-material.js"></script>
+
+  <script src="../../../node_modules/angular-route/angular-route.min.js"></script>
+  <script src="../../resources/javascript/login.js"></script>
+  <script src="../aplicação/app.js"></script>
+  <script src="../aplicação/routesConfig.js"></script>
+  <script src="../views/views.constants.js"></script>
+
+  <!-- Auth -->
+  <script src="../auth/authController.js"></script>
+  <script src="../auth/authService.js"></script>
+  <script src="../auth/authFactory.js"></script>
+  <!-- FIM -->
+
+  <!-- HOME -->
+  <script src="../home/home.controller.js"></script>
+  <!-- FIM -->
+
+  <!-- CARTAO -->
+  <script src="../cadastroDeCartao/cadCartaoController.js"></script>
+  <!-- FIM -->
+</body>
+
+</html>

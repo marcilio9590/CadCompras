@@ -1,11 +1,18 @@
-angular.module('myApp').config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-    // $locationProvider.html5Mode(true);
-    $urlRouterProvider.otherwise('/login');
-
-    $stateProvider
-        .state("login", {
-            url: "/login",
-            templateUrl: "index.html",
-            controller: "AuthController",
+(function() {
+    'use strict';
+  
+    angular.module('myApp')
+      .config(function($routeProvider, $locationProvider) {
+        $routeProvider
+          .when('/home', {
+            templateUrl: 'app/modules/home/home.html',
+            controller: 'HomeController'
+          }).otherwise({
+            redirectTo: '/'
         });
-});
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+          });
+      });
+  })();

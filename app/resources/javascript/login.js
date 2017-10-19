@@ -5,7 +5,7 @@ $(function(){
                     //little validation just to check username
                     if (textfield.val() != "") {
                         //$("body").scrollTo("#output");
-                        $("#output").addClass("alert alert-success animated fadeInUp").html("Welcome back " + "<span style='text-transform:uppercase'>" + textfield.val() + "</span>");
+                        $("#output").addClass("alert alert-success animated fadeInUp").html("Seja bem vindo(a) " + "<span style='text-transform:uppercase'>" + textfield.val() + "</span>");
                         $("#output").removeClass(' alert-danger');
                         $("input").css({
                         "height":"0",
@@ -31,7 +31,7 @@ $(function(){
                     } else {
                         //remove success mesage replaced with error message
                         $("#output").removeClass(' alert alert-success');
-                        $("#output").addClass("alert alert-danger animated fadeInUp").html("sorry enter a username ");
+                        $("#output").addClass("alert alert-danger animated fadeInUp").html("Por favor digite seu login");
                     }
                     //console.log(textfield.val());
     
