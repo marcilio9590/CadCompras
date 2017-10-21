@@ -5,12 +5,114 @@
   <!-- <base href="/"> -->
   <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../resources/css/login.css">
+  <link rel="stylesheet" href="../../resources/css/menu.style.css">
+  <link rel="stylesheet" href="../../resources/icons/css/font-awesome.min.css">
   <link rel="stylesheet" href="../../../bower_components/angular-material/angular-material.css">
 </head>
 
-<body class="content" ng-controller="AuthController">
+<body class="container-fluid" ng-controller="AuthController">
   <!-- MENU -->
+  <div id='cssmenu'>
+    <ul>
+      <li class="active">
+        <a href='#/home'>
+          <span>Início</span>
+        </a>
+      </li>
+      <li class='active has-sub'>
+        <a href='#'>
+          <span>Cartões</span>
+        </a>
+        <ul>
+          <li class='has-sub'>
+            <a href='#'>
+              <span>Product 1</span>
+            </a>
+            <ul>
+              <li>
+                <a href='#'>
+                  <span>Sub Product</span>
+                </a>
+              </li>
+              <li class='last'>
+                <a href='#'>
+                  <span>Sub Product</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class='has-sub'>
+            <a href='#'>
+              <span>Product 2</span>
+            </a>
+            <ul>
+              <li>
+                <a href='#'>
+                  <span>Sub Product</span>
+                </a>
+              </li>
+              <li class='last'>
+                <a href='#'>
+                  <span>Sub Product</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class='active has-sub'>
+        <a href='#'>
+          <span>Compras</span>
+        </a>
+        <ul>
+          <li class='has-sub'>
+            <a href='#'>
+              <span>Product 1</span>
+            </a>
+            <ul>
+              <li>
+                <a href='#'>
+                  <span>Sub Product</span>
+                </a>
+              </li>
+              <li class='last'>
+                <a href='#'>
+                  <span>Sub Product</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class='has-sub'>
+            <a href='#'>
+              <span>Product 2</span>
+            </a>
+            <ul>
+              <li>
+                <a href='#'>
+                  <span>Sub Product</span>
+                </a>
+              </li>
+              <li class='last'>
+                <a href='#'>
+                  <span>Sub Product</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class='active last'>
+        <a href='#'>
+          <span>Usuários</span>
+        </a>
+      </li>
+      <div class="btnSair">
+        <i class="fa fa-power-off fa-2x" aria-hidden="true"></i>
+      </div>
+    </ul>
+  </div>
 
+  <!-- CONTEÚDO -->
   <div ng-view></div>
 
   <!-- bootstrap -->
