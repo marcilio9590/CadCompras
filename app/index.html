@@ -1,53 +1,83 @@
-<html ng-app="myApp">
+<!doctype html>
+<html>
 
 <head>
-    <title>AngularJS</title>
-    <!-- <base href="/"> -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="resources/css/login.css">
-    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
+  <meta charset="utf-8">
+  <title>Gestão de dividas</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/login.css">
+  <link rel="stylesheet" href="styles/menu.style.css">
+  <!-- endbuild -->
+  <base href="/" />
 </head>
 
-<body class="content" ng-controller="AuthController">
-    <div class="login-container">
-        <div id="output"></div>
-        <div class="avatar"></div>
-        <div class="form-box">
-            <form action="" method="">
-                <input name="user" ng-model="user.login" type="text" placeholder="Login">
-                <input type="password" ng-model="user.senha" placeholder="Senha">
-                <md-button ng-click="login()" class="md-raised md-primary col-md-10">Login</md-button>
-            </form>
-        </div>
+<body ng-app="gestDividasApp">
+  <!-- Add your site or application content here -->
+  <div class="header" ng-show="isLogged()" ng-controller="MainCtrl">
+      <div ng-include src="'views/menu.html'"></div>
+  </div>
+  <div class="container">
+    <div ng-view=""></div>
+  </div>
+
+  <div class="footer">
+    <div class="container-fluid">
+      <p>
+        Copyrigth &copy; 2017, McSystems. All Rigths Reserved.
+      </p>
     </div>
-    
-    <!-- <div ng-view>
-    </div> -->
+  </div>
 
-    <!-- bootstrap -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../bower_components/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FIM -->
 
-    <script src="../bower_components/tooltip.js/index.js"></script>
-    <script src="../bower_components/angular/angular.min.js"></script>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    !function (A, n, g, u, l, a, r) {
+      A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+        (A[l].q = A[l].q || []).push(arguments)
+      }, A[l].l = +new Date, a = n.createElement(g),
+        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    <script src="../bower_components/angular-aria/angular-aria.js"></script>
-    <script src="../bower_components/angular-animate/angular-animate.js"></script>
-    <script src="../bower_components/angular-material/angular-material.js"></script>
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
 
-    <script src="../node_modules/angular-route/angular-route.min.js"></script>
-    <script src="resources/javascript/login.js"></script>
-    <script src="modules/aplicação/app.js"></script>
-    <script src="modules/aplicação/routesConfig.js"></script>
-    <script src="modules/views/views.constants.js"></script>
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- Auth -->
-    <script src="modules/auth/authController.js"></script>
-    <script src="modules/auth/authService.js"></script>
-    <script src="modules/auth/authFactory.js"></script>
-    <!-- FIM -->
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/login.controller.js"></script>
+  <script src="scripts/services/login.service.js"></script>
+  <script src="scripts/controllers/home.controller.js"></script>
+  <script src="scripts/services/home.service.js"></script>
+  <!-- endbuild -->
 </body>
 
 </html>
