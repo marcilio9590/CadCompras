@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngMaterial'
+    'ngMaterial',
+    'angularUtils.directives.dirPagination'
   ])
   .config(function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
@@ -31,7 +32,25 @@ angular
         controller: 'HomeCtrl',
         controllerAs: 'home'
       })
+      .when('/cartoes', {
+        templateUrl: 'views/cartoes.html',
+        controller: 'CartoesCtrl',
+        controllerAs: 'cartoes'
+      })
+      .when('/cadastro_cartao', {
+        templateUrl: 'views/cadastro_cartao.html',
+        controller: 'CadastroCartaoCtrl',
+        controllerAs: 'cadastroCartao'
+      })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }).config(function($mdThemingProvider) {
+    
+        // Configure a dark theme with primary foreground yellow
+    
+        $mdThemingProvider.theme('docs-dark', 'default')
+          .primaryPalette('yellow')
+          .dark();
+    
+      });
