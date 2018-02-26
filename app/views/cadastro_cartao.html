@@ -1,1 +1,28 @@
-<p>This is the cadastro_cartao view.</p>
+<md-content md-theme="" layout-padding>
+    <h1>
+        <label>Novo Cartão</label>
+    </h1>
+    <div layout-gt-sm="row">
+        <md-input-container>
+            <label>Nome</label>
+            <input ng-model="cartao.nome">
+        </md-input-container>
+
+        <md-input-container>
+            <label>Limite</label>
+            <input ng-model="cartao.limite" type="number">
+        </md-input-container>
+
+        <md-input-container>
+            <label>Dia Vencimento</label>
+            <input ng-model="cartao.vencimento" type="number">
+        </md-input-container>
+    </div>
+    <div layout-gt-sm="row">
+        <md-button title="Salvar" class="md-fab md-primary md-hue-3" aria-label="Profile">
+            <md-icon style="margin-top:-22px;">
+                <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+            </md-icon>
+        </md-button>
+    </div>
+</md-content>

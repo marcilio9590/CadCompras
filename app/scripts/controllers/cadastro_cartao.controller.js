@@ -8,10 +8,8 @@
  * Controller of the gestDividasApp
  */
 angular.module('gestDividasApp')
-  .controller('CadastroCartaoCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('CadastroCartaoCtrl', function ($scope) {
+    var vm = $scope;
+    vm.cartao = {};
+
   });
