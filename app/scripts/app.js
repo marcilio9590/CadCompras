@@ -33,7 +33,7 @@ angular
         controllerAs: 'home'
       })
       .when('/cartoes', {
-        templateUrl: 'views/cartoes.html',
+        templateUrl: 'views/list_cartoes.html',
         controller: 'CartoesCtrl',
         controllerAs: 'cartoes'
       })
@@ -41,6 +41,36 @@ angular
         templateUrl: 'views/cadastro_cartao.html',
         controller: 'CadastroCartaoCtrl',
         controllerAs: 'cadastroCartao'
+      })
+      .when('/cadastro_salario', {
+        templateUrl: 'views/cadastro_salario.html',
+        controller: 'CadastroSalarioCtrl',
+        controllerAs: 'cadastroSalario'
+      })
+      .when('/list_salarios', {
+        templateUrl: 'views/list_salarios.html',
+        controller: 'ListSalariosCtrl',
+        controllerAs: 'listSalarios'
+      })
+      .when('/cadastro_retirada_poupanca', {
+        templateUrl: 'views/cadastro_retirada_poupanca.html',
+        controller: 'CadastroRetiradaPoupancaCtrl',
+        controllerAs: 'cadastroRetiradaPoupanca'
+      })
+      .when('/list_retirada_poupanca', {
+        templateUrl: 'views/list_retirada_poupanca.html',
+        controller: 'ListRetiradaPoupancaCtrl',
+        controllerAs: 'listRetiradaPoupanca'
+      })
+      .when('/cadastro_divida', {
+        templateUrl: 'views/cadastro_divida.html',
+        controller: 'CadastroDividaCtrl',
+        controllerAs: 'cadastroDivida'
+      })
+      .when('/list_divida', {
+        templateUrl: 'views/list_divida.html',
+        controller: 'ListDividaCtrl',
+        controllerAs: 'listDivida'
       })
       .otherwise({
         redirectTo: '/'

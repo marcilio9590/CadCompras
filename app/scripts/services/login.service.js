@@ -9,7 +9,7 @@
      * Service in the gestDividasApp.
      */
     angular.module('gestDividasApp')
-        .service('loginService', function () {
+        .service('loginService', function ($location) {
             var logado = false;
             function login(user) {
                 // return $http.post('localhost:8081/login', data).then(function(response){
@@ -27,13 +27,23 @@
                 return response;
             }
 
-            function confirmarLogin(){
+            function confirmarLogin() {
                 return logado;
             }
 
+            /**
+             * 
+             * @param {*Caminho para redirecionamento} path 
+             */
+            function goTo(path) {
+                $location.path(path);
+            }
+
+
             var exports = {
                 login: login,
-                confirmarLogin:confirmarLogin
+                confirmarLogin: confirmarLogin,
+                goTo: goTo
             }
 
             return exports;
