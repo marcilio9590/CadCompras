@@ -72,6 +72,21 @@ angular
         controller: 'ListDividaCtrl',
         controllerAs: 'listDivida'
       })
+      .when('/estatisticas', {
+        templateUrl: 'views/estatisticas.html',
+        controller: 'EstatisticasCtrl',
+        controllerAs: 'estatisticas'
+      })
+      .when('/cadastro_responsavel_dividas', {
+        templateUrl: 'views/cadastro_responsavel_dividas.html',
+        controller: 'CadastroResponsavelDividasCtrl',
+        controllerAs: 'cadastroResponsavelDividas'
+      })
+      .when('/list_responsavel_dividas', {
+        templateUrl: 'views/list_responsavel_dividas.html',
+        controller: 'ListResponsavelDividasCtrl',
+        controllerAs: 'listResponsavelDividas'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -7,7 +7,6 @@
           <button ng-click="goTo('/home')">
             Início
           </button>
-          <md-menu-content></md-menu-content>
         </md-menu>
 
         <md-menu class="menuItem">
@@ -88,6 +87,32 @@
               </md-button>
             </md-menu-item>
           </md-menu-content>
+        </md-menu>
+
+        <md-menu class="menuItem">
+          <button ng-click="$mdMenu.open()">
+            Responsáveis
+          </button>
+          <md-menu-content>
+            <md-menu-item>
+              <md-button ng-click="goTo('/cadastro_responsavel_dividas')">
+                Novo Responsável
+              </md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+
+            <md-menu-item>
+              <md-button ng-click="goTo('/list_responsavel_dividas')">
+                Responsáveis Cadastrados
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+
+        <md-menu class="menuItem">
+          <button ng-click="goTo('/estatisticas')">
+            Estatísticas
+          </button>
         </md-menu>
 
       </md-menu-bar>
