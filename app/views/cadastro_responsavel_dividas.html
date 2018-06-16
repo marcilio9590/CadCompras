@@ -1,1 +1,21 @@
-<p>This is the cadastro_responsavel_dividas view.</p>
+<md-content md-theme="" layout-padding>
+    <h1>
+        <label>Cadastro de Responsáveis</label>
+    </h1>
+    <form name="cad_responsavel">
+        <div layout-gt-sm="row">
+            <md-input-container>
+                <label>Nome</label>
+                <input ng-minlength="5" required ng-model="responsavel.nome">
+            </md-input-container>
+
+        </div>
+        <div layout-gt-sm="row">
+            <md-button ng-disabled="cad_responsavel.$invalid" title="Salvar" class="md-fab md-primary md-hue-3" aria-label="Profile">
+                <md-icon style="margin-top:-22px;">
+                    <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+                </md-icon>
+            </md-button>
+        </div>
+    </form>
+</md-content>

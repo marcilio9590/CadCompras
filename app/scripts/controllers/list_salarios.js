@@ -8,10 +8,11 @@
  * Controller of the gestDividasApp
  */
 angular.module('gestDividasApp')
-  .controller('ListSalariosCtrl', function ($scope) {
+  .controller('ListSalariosCtrl', function ($scope, loginService) {
 
     var vm = $scope;
     vm.salarios = [];
+    vm.goTo = loginService.goTo;
 
     function listarSalarios() {
       var data = new Date();

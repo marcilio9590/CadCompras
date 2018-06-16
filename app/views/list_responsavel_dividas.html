@@ -1,1 +1,25 @@
-<p>This is the list_responsavel_dividas view.</p>
+<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+    <md-button ng-click="goTo('/cadastro_responsavel_dividas')" title="Cadastrar Novo Responsável" class="md-fab md-primary md-hue-2"
+        aria-label="Profile">
+        <md-icon style="margin-top:-22px;">
+            <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+        </md-icon>
+    </md-button>
+</section>
+
+<table class="table table-hover table-sm table-bordered">
+    <thead class="">
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr dir-paginate="responsavel in responsaveis | filter:procurar|orderBy:sortKey:reverse|itemsPerPage:5">
+            <th ng-bind-html="responsavel.codigo"></th>
+            <td ng-bind-html="responsavel.nome"></td>
+        </tr>
+    </tbody>
+</table>
+
+<dir-pagination-controls max-size="5" boundary-links="true"></dir-pagination-controls>
