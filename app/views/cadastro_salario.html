@@ -1,1 +1,25 @@
-<p>This is the cadastro_salario view.</p>
+<md-content md-theme="" layout-padding>
+    <h1>
+        <label>Cadastro de Crédito de Salário</label>
+    </h1>
+    <form name="cad_credt_salario">
+        <div layout-gt-sm="row">
+            <md-input-container>
+                <label>Valor</label>
+                <input required ng-model="salario.valor">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Dia de Recebimento</label>
+                <input required ng-model="salario.dia_recebimento" max="31" type="number">
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+            <md-button ng-disabled="cad_credt_salario.$invalid" title="Salvar" class="md-fab md-primary md-hue-3" aria-label="Profile">
+                <md-icon style="margin-top:-22px;">
+                    <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+                </md-icon>
+            </md-button>
+        </div>
+    </form>
+</md-content>

@@ -8,10 +8,7 @@
  * Controller of the gestDividasApp
  */
 angular.module('gestDividasApp')
-  .controller('CadastroSalarioCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('CadastroSalarioCtrl', function ($scope) {
+    var vm = $scope;
+    vm.salario = {};
   });
