@@ -1,1 +1,32 @@
-<p>This is the cadastro_retirada_poupanca view.</p>
+<md-content md-theme="" layout-padding>
+    <h1>
+        <label>Retirada da Poupança
+            <label>
+    </h1>
+    <form name="cad_retirada">
+        <div layout-gt-sm="row">
+
+            <md-input-container>
+                <label>Valor</label>
+                <input required ng-model="retirada.valor" type="number">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Motivo</label>
+                <input required ng-model="retirada.motivo">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Dia Vencimento</label>
+                <input required ng-model="retirada.vencimento" max="31" type="number">
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+            <md-button ng-disabled="cad_retirada.$invalid" title="Salvar" class="md-fab md-primary md-hue-3" aria-label="Profile">
+                <md-icon style="margin-top:-22px;">
+                    <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+                </md-icon>
+            </md-button>
+        </div>
+    </form>
+</md-content>
