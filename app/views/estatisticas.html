@@ -1,1 +1,30 @@
-<p>This is the estatisticas view.</p>
+<h1>
+    <label>Estatísticas</label>
+</h1>
+
+<div class="row">
+    <div class="col-xs-11">
+        <md-input-container layout-padding>
+            <label>Dia</label>
+            <md-select ng-model="forms.diaAnalise">
+                <md-option ng-repeat="item in creditoSalario" ng-value="item.codigo">
+                    {{item.dia}}
+                </md-option>
+            </md-select>
+        </md-input-container layout-padding>
+
+        <md-input-container>
+            <label>Responsável</label>
+            <md-select ng-model="forms.responsavelSelecionado">
+                <md-option ng-repeat="item in responsaveis" ng-value="item.codigo">
+                    {{item.nome}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+</div>
+
+<div class="row pull-right">
+    <md-button ng-click="limpar()" class="md-raised">Limpar</md-button>
+    <md-button ng-click="pesquisar()" class="md-raised">Pesquisar</md-button>
+</div>
