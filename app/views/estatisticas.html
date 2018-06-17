@@ -11,9 +11,11 @@
                     {{item.dia}}
                 </md-option>
             </md-select>
-        </md-input-container layout-padding>
+        </md-input-container>
 
-        <md-input-container>
+        Mês/Ano
+
+        <md-input-container layout-padding>
             <label>Responsável</label>
             <md-select ng-model="forms.responsavelSelecionado">
                 <md-option ng-repeat="item in responsaveis" ng-value="item.codigo">

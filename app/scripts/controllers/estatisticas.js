@@ -23,7 +23,7 @@ angular.module('gestDividasApp')
       vm.responsaveis.push({ codigo: 1, nome: "Junior" }, { codigo: 2, nome: "Fatima" });
     }
 
-    function obterEstatisticaPorDiaResp() {
+    vm.pesquisar = function () {
       //TODO:
     }
 
